@@ -11,3 +11,4 @@ project-overview.txt
 # ignore the terraform files
 *.terraform
 *.terraform*
+*terraform.*
