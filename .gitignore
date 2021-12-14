@@ -7,3 +7,7 @@ project-overview.txt
 # ignore the sublime text project file
 *.sublime-project
 *.sublime-workspace
+
+# ignore the terraform files
+*.terraform
+*.terraform*
