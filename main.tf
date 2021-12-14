@@ -8,11 +8,11 @@ terraform {
 }
 
 provider "google" {
-  credentials = file("prefab-poetry-335109-d56063b33b61.json")
+  credentials = file(var.credentials_file)
 
-  project = "prefab-poetry-335109"
-  region  = "europe-west"
-  zone    = "europe-west3-c"
+  project = var.project
+  region  = var.region
+  zone    = var.zone
 }
 
 resource "google_compute_network" "vpc_network" {
@@ -20,8 +20,9 @@ resource "google_compute_network" "vpc_network" {
 }
 
 resource "google_compute_instance" "vm_instance" {
-  name = "terraform-instance"
-  machine_type = "e2-micro"
+  name          = "terraform-instance"
+  machine_type  = "e2-micro"
+  tags          = ["web", "dev"]
 
   boot_disk {
       initialize_params {
