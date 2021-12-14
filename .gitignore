@@ -1,0 +1,8 @@
+# Ignore service account key
+prefab-poetry-335109-d56063b33b61.json
+
+# ignore the overview file
+project-overview.txt
+
+# ignore the sublime text project file
+*.sublime-project
